@@ -2,7 +2,7 @@
 
 ## Disclaimer
 
-This repository is highly inspired by [openvnf/kubealived](https://github.com/openvnf/kubealived/) so does this `README.md`. [openvnf](https://github.com/openvnf) described `kuvealived` perfectly. I reworked and updated everything to the newest version. This version is beside of `linux/amd64` now also available for `linux/arm64` and `linux/arm/v7` on [docker.io](https://hub.docker.com/r/gurken2108/kubealived).
+This repository is highly inspired by [openvnf/kubealived](https://github.com/openvnf/kubealived/) so does this `README.md`. [openvnf](https://github.com/openvnf) described `kubealived` perfectly. I reworked and updated everything to the newest version. This version is beside of `linux/amd64` now also available for `linux/arm64` and `linux/arm/v7` on [docker.io](https://hub.docker.com/r/gurken2108/kubealived).
 
 
 ## About
@@ -30,7 +30,7 @@ $ IFACE="<Network Interface>"
 $ IP="<IP Address>"
 $ cat curl -s https://raw.githubusercontent.com/Gurkengewuerz/kubealived/main/manifests/kubealived.yaml | \
        sed -e "s/_IFACE_/${IFACE}/" \
-           -e "s/_IP_/${IP}/" \
+           -e "s/_IP_/${IP}/" | \
        kubectl apply -f-
 ```
 
