@@ -28,7 +28,7 @@ within a particular network. It should be in the range from 1 to 255.
 ```
 $ IFACE="<Network Interface>"
 $ IP="<IP Address>"
-$ cat curl -s https://raw.githubusercontent.com/Gurkengewuerz/kubealived/main/manifests/kubealived.yaml | \
+$ curl -s https://raw.githubusercontent.com/Gurkengewuerz/kubealived/main/manifests/kubealived.yaml | \
        sed -e "s/_IFACE_/${IFACE}/" \
            -e "s/_IP_/${IP}/" | \
        kubectl apply -f-
